@@ -1,129 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
 
-:root{
-    --card-bg: hsl(0, 100%, 100%);
-    --container-bg: hsl(275, 100%, 97%);
-    --card-para: hsl(292, 16%, 49%);
-    --card-ques: hsl(292, 42%, 14%);
-    --color-hover:hsl(292, 93%, 42%);
+:root {
+  --card-bg: hsl(0, 100%, 100%);
+  --container-bg: hsl(275, 100%, 97%);
+  --card-para: hsl(292, 16%, 49%);
+  --card-ques: hsl(292, 42%, 14%);
+  --color-hover: hsl(292, 93%, 42%);
 
-    --font-base: 'Work Sans', sans-serif;
+  --font-base: "Work Sans", sans-serif;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  
   background-position: top center;
   font-family: var(--font-base);
 }
 
-.container{
-    background-color: var(--container-bg);
-    background-image: url(assets/images/background-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: 100vw auto; /* full width */
-    min-height: 100vh;
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container {
+  background-color: var(--container-bg);
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto; /* full width */
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.card{
-    width:clamp(16rem,88vw,26rem);
-    height: auto;
-    background-color: var(--card-bg);
-    border: 0.06rem solid var(--card-bg);
-    border-radius: 0.6rem;
-    padding:1.4rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+.card {
+  width: clamp(16rem, 88vw, 26rem);
+  height: auto;
+  background-color: var(--card-bg);
+  border: 0.06rem solid var(--card-bg);
+  border-radius: 0.6rem;
+  padding: 1.4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
-.card__header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:1.5rem
+.card__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.header__icon img{
-    height: 1.5rem;
+.header__icon img {
+  height: 1.5rem;
 }
 
-.header__title{
-    font-size: 2rem;
-    font-weight: 700;
+.header__title {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.faq__items{
-    padding-block: 1.3rem;
-    border-bottom: 0.06rem solid var(--card-para);
+.faq__items {
+  padding-block: 1.3rem;
+  border-bottom: 0.06rem solid var(--card-para);
 }
 
 .faq__items:last-child {
   border-bottom: none;
 }
 
-
 .faq__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem; 
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
-.ques{
-    font-weight: 600;
-    color:var(--card-ques);
-    cursor: pointer;
+.ques {
+  font-weight: 600;
+  color: var(--card-ques);
+  cursor: pointer;
 }
 
-.ques:hover{
-    color:var(--color-hover)
+.ques:hover {
+  color: var(--color-hover);
 }
 
-.icon{
-    cursor: pointer;
+.icon {
+  cursor: pointer;
 }
 
-.ans{
-    padding-block-start: 1.5rem;
-    color:var(--card-para);
-    font-size: 0.9rem;
-    font-weight: 400;
-   
+.ans {
+  padding-block-start: 1.5rem;
+  color: var(--card-para);
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: none;
 }
 
-.attribution{
-    display: none;
+.ans.show {
+  display: block;
+}
+
+.attribution {
+  display: none;
 }
 
 @media (min-width: 26rem) {
+  .container {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 
-    .container {
-        background-image: url(assets/images/background-pattern-desktop.svg);
-        background-repeat: no-repeat;       
-        background-position: top center;
-    }
+  .card {
+    width: clamp(26rem, 35vw, 36rem);
+    height: auto;
+    border-radius: 1rem;
+  }
 
-    .card{
-        width: clamp(26rem,35vw,36rem);
-        height: auto;
-        border-radius: 1rem;
-    }
+  .header__title {
+    font-size: 3rem;
+  }
 
-    .header__title{
-        font-size: 3rem;
-    }
-
-    .header__icon img{
-        height:2rem;
-    }
+  .header__icon img {
+    height: 2rem;
+  }
 }
