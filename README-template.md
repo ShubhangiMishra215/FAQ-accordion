@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/your-solution-url)
-- Live Site URL: [Live Demo](https://your-live-site.netlify.app)
+- Solution URL: [Frontend Mentor Submission](https://github.com/ShubhangiMishra215/FAQ-accordion.git)
+- Live Site URL: [Live Demo](https://shubhangimishra215.github.io/FAQ-accordion/)
 
 ---
 
