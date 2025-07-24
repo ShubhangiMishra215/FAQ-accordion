@@ -1,24 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const faqItems = document.querySelectorAll('.faq__items');
+const headers = document.querySelectorAll(".faq__header");
 
-  faqItems.forEach(item => {
-    const header = item.querySelector('.faq__header');
-    const answer = item.querySelector('.ans');
-    const icon = item.querySelector('.icon img');
+headers.forEach(header => {
+  header.addEventListener("click", () => {
+    const answer = header.nextElementSibling;
+    const icon = header.querySelector("img");
 
-    header.addEventListener('click', () => {
-      const isOpen = answer.style.display === 'block';
+    const isOpen = answer.classList.contains("show");
 
-      document.querySelectorAll('.ans').forEach(ans => ans.style.display = 'none');
-      document.querySelectorAll('.icon img').forEach(img => {
-        img.src = 'assets/images/icon-plus.svg';
-      });
-
-      
-      if (!isOpen) {
-        answer.style.display = 'block';
-        icon.src = 'assets/images/icon-minus.svg';
-      }
+   
+    document.querySelectorAll(".ans").forEach(ans => ans.classList.remove("show"));
+    document.querySelectorAll(".faq__header img").forEach(img => {
+      img.src = "assets/images/icon-plus.svg";
     });
+
+   
+    if (!isOpen) {
+      answer.classList.add("show");
+      icon.src = "assets/images/icon-minus.svg";
+    }
   });
 });
